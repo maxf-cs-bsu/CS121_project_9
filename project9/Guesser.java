@@ -19,7 +19,22 @@ public class Guesser{
         System.out.println("Thank you for playing!");
 	keepGoing = false;
       } else if (response.equals("1")){
-        System.out.println("you pressed 1! this is temp text for the sake of testing.");
+        System.out.println("I'm thinking of a number between 1 and 100, try to guess it!");
+
+	boolean otherKeepGoing = true;
+	int randomNum = (int) (Math.random() * 100);
+	int attempts = 1
+	while(otherKeepGoing){
+          System.out.print(attempts + ") Enter a number: ");
+	  int userNum = input.nextInt();
+	  if (userNum.equals(randomNum)){
+            //temp code
+	  }
+
+
+
+	} // end of other keepGoing while loop
+
       } else if (response.equals("2")){
         System.out.println("you pressed 2! this is also temp text for the sake of testing things.");
       } // end of if
