@@ -23,15 +23,21 @@ public class Guesser{
 
 	boolean otherKeepGoing = true;
 	int randomNum = (int) (Math.random() * 100);
-	int attempts = 1
+	// System.out.println(randomNum); // cheat for testing
+	int attempts = 1;
 	while(otherKeepGoing){
           System.out.print(attempts + ") Enter a number: ");
 	  int userNum = input.nextInt();
-	  if (userNum.equals(randomNum)){
-            //temp code
-	  }
-
-
+	  if (userNum == randomNum){
+            otherKeepGoing = false;
+            System.out.println("YOU'RE WINNER");
+	  } else if (userNum > randomNum){
+            attempts += 1;
+	    System.out.println("Too high.");
+	  } else if (userNum < randomNum){
+            attempts += 1;
+	    System.out.println("Too low.");
+	  } // end of if
 
 	} // end of other keepGoing while loop
 

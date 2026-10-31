@@ -30,7 +30,17 @@ public class Guesser // main definer
 
     if else response = 2
       system.out.println("i'm gonna guess what number you're thinking of from 1 to 100...")
-      TEMP. FILL OUT LATER.
+      attempts = 1
+      string menuCpu = ("Too (H)igh, too (L)ow, or (C)orrect?");
+      boolean keepGoing = true;
+      while(keepGoing)
+        if menuCpu = h
+          have computer guess higher
+        else if menuCpu = l
+          have omputer guess lower
+        else if menuCpu = c
+          keepGoing = false;
+          system.out.println("I win")
  
   make a public string menu for UI
     system.out.println("0) Exit ");
