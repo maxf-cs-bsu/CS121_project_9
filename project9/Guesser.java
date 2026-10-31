@@ -42,9 +42,30 @@ public class Guesser{
 	} // end of other keepGoing while loop
 
       } else if (response.equals("2")){
-        System.out.println("you pressed 2! this is also temp text for the sake of testing things.");
-      } // end of if
+        System.out.println("Think of a number between 1 and 100 and I'll try to guess it! (No cheating!)");
 
+	boolean cpuKeepGoing = true;
+	int low = 1;
+	int high = 100;
+	int cpuAttempts = 1;
+	while(cpuKeepGoing){
+          int cpuGuess = (low + high) / 2;
+	  System.out.println(cpuAttempts + ") I guess: " + cpuGuess);
+	  System.out.print("Too (H)igh, too (L)ow, or (C)orrect?: ");
+
+          String cpuMenu = input.nextLine();
+	  if (cpuMenu.equalsIgnoreCase("H")){
+            high = cpuGuess - 1;
+	    cpuAttempts += 1;
+	  } else if (cpuMenu.equalsIgnoreCase("L")){
+            low = cpuGuess + 1;
+	    cpuAttempts += 1;
+	  } else if (cpuMenu.equalsIgnoreCase("C")){
+            cpuKeepGoing = false;
+	    System.out.println("I win!");
+	  } // end of if
+	} // end of cpuKeepGoing
+      } // end of if
     } // end of while
   } // end of constructor
 
