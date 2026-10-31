@@ -63,7 +63,12 @@ public class Guesser{
 	  } else if (cpuMenu.equalsIgnoreCase("C")){
             cpuKeepGoing = false;
 	    System.out.println("I win!");
-	  } // end of if
+	  } else if (low > high && cpuKeepGoing){
+            cpuKeepGoing = false;
+	    System.out.println("Something doesn't add up. Did you cheat?");
+	  } else {
+            System.out.println("Please enter only H, L, or C.");
+	  }
 	} // end of cpuKeepGoing
       } // end of if
     } // end of while
